@@ -1,0 +1,10 @@
+<table>
+  <% @diary_entries.each  do |diary_entry| %>
+  <tr>
+    <td><%=h diary_entry.created_at %></td>
+    <td><%=h diary_entry.title %></td>
+    <td><%= diary_entry.entry %></td>
+    <td><%=link_to(h("Delete"), diary_entry_path(diary_entry), :method => :delete) %></td>
+  <tr>
+  <% end %>
+</table>

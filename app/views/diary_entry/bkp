@@ -1,0 +1,4 @@
+<% for diary_entry in @diary_entries do %>
+  <h2><%=h diary_entry.title %></h2>
+  <p><%= diary_entry.entry %></p>
+<% end %>

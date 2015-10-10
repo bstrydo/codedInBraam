@@ -1,0 +1,10 @@
+<h3>Post a Diary Entry</h3>
+<% form_for(@diary_entry) do |form| %>
+  <p><%= form.label :title %></p>
+  <p><%= form.text_field :title %></p>
+ 
+  <p><%= form.label :entry, 'entry' %></p>
+  <p><%= form.text_area :entry %></p>
+ 
+  <%= form.submit 'Save' %>
+<% end %>

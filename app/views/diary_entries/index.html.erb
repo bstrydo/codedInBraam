@@ -1,0 +1,20 @@
+<h3>Post a Diary Entry</h3>
+<% form_for(@diary_entry) do |form| %>
+  <p><%= form.label :title %></p>
+  <p><%= form.text_field :title %></p>
+ 
+  <p><%= form.label :entry, 'entry' %></p>
+  <p><%= form.text_area :entry %></p>
+ 
+  <%= form.submit 'Save' %>
+<% end %>
+<table>
+  <% @diary_entries.each  do |diary_entry| %>
+  <tr>
+    <td><%=h diary_entry.created_at %></td>
+    <td><%=h diary_entry.title %></td>
+    <td><%= diary_entry.entry %></td>
+    <td><%=link_to(h("Delete"), diary_entry_path(diary_entry), :method => :delete) %></td>
+  <tr>
+  <% end %>
+</table>
