@@ -11,5 +11,5 @@ run curl -L https://get.rvm.io | bash -s stable --ruby
 RUN /usr/local/rvm/bin/rvm get stable --autolibs=enable
 RUN /usr/local/rvm/bin/rvm install ruby 2.2.3
 RUN /usr/local/rvm/bin/rvm --default use ruby-2.2.3
-COPY entryPoint.sh /bin/entryPoint.sh
+#COPY entryPoint.sh /bin/entryPoint.sh
 RUN chmod 755 /bin/entryPoint.sh
